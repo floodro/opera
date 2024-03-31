@@ -4,5 +4,5 @@ from django.shortcuts import render
 def userLogin(response):
     return render(response, 'login.html', {})
 
-def Register(response):
+def userRegister(response):
     return render(response, 'register.html', {})
