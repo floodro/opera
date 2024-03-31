@@ -1,4 +1,4 @@
-# OPERA - Office Portal and Events Appraiser
+# OPERA - Office Portal, Events & Records Appraiser
 
 OPERA, short for Office Portal and Events  Appraiser, is a web-based management portal made for the Office of Culture & Arts of Batangas State University.
 
