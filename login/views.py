@@ -1,5 +1,8 @@
 from django.shortcuts import render
 
 # Create your views here.
-def login(response):
-    return render(response, 'signin.html', {})
+def userLogin(response):
+    return render(response, 'login.html', {})
+
+def Register(response):
+    return render(response, 'register.html', {})
