@@ -7,3 +7,6 @@ def enterDashboard(response):
 def enterLanding(response):
     return render(response, 'landing.html', {})
 
+def enterHome(response):
+    return render(response, 'home.html', {})
+

@@ -38,7 +38,7 @@
     
 <main class="form-signin">
   <form>
-    <input type="image" class="mb-4" src="{% static '/assets/brand/OCA-Logo.svg' %}" alt="" width="72" height="72" href="/landing/">
+    <input type="image" class="mb-4" src="{% static '/assets/brand/OCA-Logo.svg' %}" alt="" width="72" height="72" onclick="{% url 'landing' %}">
     <h1 class="h3 mb-3 fw-normal">Sign In To Your Account</h1>
 
     <div class="form-floating">
@@ -56,7 +56,7 @@
       </label>
     </div>
     <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-    <a class="btn btn-link" href="{% static '/login.html' %}">Create an Account</a>
+    <a class="btn btn-link" href="/register/">Create an Account</a>
     <p class="mt-5 mb-3 text-muted">&copy; Project OPERA 2024</p>
   </form>
 </main>
