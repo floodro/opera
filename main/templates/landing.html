@@ -39,9 +39,9 @@
     <main>
 
       <div class="laman-landing">
-      <img class="mb-4" src="/assets/brand/OCA-Logo.svg" alt="Office of Culture and Arts Logo" width="128" height="128">
+      <img class="mb-4" src="{% static '/assets/brand/OCA-Logo.svg' %}" alt="Office of Culture and Arts Logo" width="128" height="128">
       <h1 class="display-5 fw-bold">OPERA</h1>
-        <p class="lead mb-4"><i>Office Portal, Events & Records Appraiser</i>: a web-based management portal made for the Office of Culture & Arts of Batangas State University.</p>
+        <p class="lead mb-4"><i>Office Portal, Events and Records Appraiser</i>: a web-based management portal made for the Office of Culture & Arts of Batangas State University.</p>
         <div class="d-grid gap-4 d-sm-flex justify-content-sm-center">
           <a class="btn btn-primary btn-lg px-4 gap-3" data-bs-toggle="modal" data-bs-target="#signInModal">Sign In</a>
           <a class="btn btn-outline-secondary btn-lg px-4" data-bs-toggle="modal" data-bs-target="#createAccountModal">Create an Account</a>
@@ -89,9 +89,9 @@
       </div>
   </main>
   
-  
-      <script src="{% static'../assets/dist/js/bootstrap.bundle.min.js' %}"></script>
-  
-    </body>
+  <script src= "{% static '/assets/dist/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static '/js/landing.js' %}"></script>
+
+  </body>
   </html>
   
