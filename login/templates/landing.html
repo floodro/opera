@@ -43,46 +43,9 @@
       <h1 class="display-5 fw-bold">OPERA</h1>
         <p class="lead mb-4"><i>Office Portal, Events and Records Appraiser</i>: a web-based management portal made for the Office of Culture & Arts of Batangas State University.</p>
         <div class="d-grid gap-4 d-sm-flex justify-content-sm-center">
-          <a class="btn btn-primary btn-lg px-4 gap-3" data-bs-toggle="modal" data-bs-target="#signInModal">Sign In</a>
-          <a class="btn btn-outline-secondary btn-lg px-4" data-bs-toggle="modal" data-bs-target="#createAccountModal">Create an Account</a>
+          <a class="btn btn-primary btn-lg px-4 gap-3" href="{% url 'user_login' %}">Sign In</a>
+          <a class="btn btn-outline-secondary btn-lg px-4" href="{% url 'user_signup' %}">Create an Account</a>
         </div>
-      </div>
-  
-      <!-- Modal -->
-      <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="signInModalLabel">Sign in to OPERA</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                  I'm signing in as a
-              <div class="modal-body">
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="location.href='/login/'">Performer</button>
-                <button type="button" class="btn btn-secondary" onclick="location.href='/login/'">Staff</button>
-              </div>
-            </div>
-          </div>
-      </div>
-      </div>
-  
-      <div class="modal fade" id="createAccountModal" tabindex="-1" aria-labelledby="createAccountModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="createAccountModalLabel">Create an Account</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                  I'm creating an account as a
-              <div class="modal-body">
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="location.href='/register/'"> Performer </button>
-                <button type="button" class="btn btn-secondary" onclick="location.href='/register/'"> Staff </button>
-              </div>
-            </div>
-          </div>
-      </div>
       </div>
   
         <p class="mt-5 mb-3 text-muted">Project OPERA 2024 is Brought to you by Team VisualSync</p>
@@ -92,16 +55,6 @@
   <script src= "{% static '/assets/dist/js/bootstrap.bundle.min.js' %}"></script>
   <script src="{% static '/js/landing.js' %}"></script>
 
-<<<<<<< HEAD:login/templates/landing.html
-    <a class="w-100 btn btn-lg btn-primary" type="button" href="{% url 'user_login' %}"> Sign In</button>
-    <a class="btn btn-secondary" href="{% url 'user_signup' %}" style="margin-top: 10px"> Create an Account </a>
-    <p class="mt-5 mb-3 text-muted"> &copy; Project OPERA 2024</p>
-  </form>
-</main>
-<script src= "{% static '/assets/dist/js/bootstrap.bundle.min.js' %}"></script>
-<script src="{% static '/js/landing.js' %}"></script>
-=======
->>>>>>> 49bae6a9c55ac4f64261c6065e5abeed06b112de:main/templates/landing.html
   </body>
   </html>
   

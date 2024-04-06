@@ -37,16 +37,10 @@
   <body class="text-center">
     
 <main class="form-signin">
-<<<<<<< HEAD
   <form action="#" method="POST">
     {% csrf_token %}
-    <img class="mb-4" src="{% static 'assets/brand/OCA-Logo.svg' %}" alt="" width="72" height="72">
-    <h1 class="h3 mb-3 fw-normal">Sign In</h1>
-=======
-  <form>
-    <input type="image" class="mb-4" src="{% static '/assets/brand/OCA-Logo.svg' %}" alt="" width="72" height="72" onclick="{% url 'landing' %}">
+    <input type="image" class="mb-4" src="{% static '/assets/brand/OCA-Logo.svg' %}" alt="" width="72" height="72">
     <h1 class="h3 mb-3 fw-normal">Sign In To Your Account</h1>
->>>>>>> 49bae6a9c55ac4f64261c6065e5abeed06b112de
 
     <div class="form-floating">
       <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="username">
@@ -65,11 +59,7 @@
     </div>
 
     <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-<<<<<<< HEAD
-    <a class="btn btn-link" href="{% url 'user_signup' %}">Create an Account</a>
-=======
-    <a class="btn btn-link" href="/register/">Create an Account</a>
->>>>>>> 49bae6a9c55ac4f64261c6065e5abeed06b112de
+    <a class="btn btn-link" href="{% url 'user_signup' %}"">Create an Account</a>
     <p class="mt-5 mb-3 text-muted">&copy; Project OPERA 2024</p>
   </form>
 </main>
