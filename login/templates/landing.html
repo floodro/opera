@@ -41,8 +41,8 @@
     <img class="mb-4" src="{% static 'assets/brand/OCA-Logo.svg' %}" alt="" width="72" height="72">
     <h1 class="h3 mb-3 fw-normal">OPERA - Office Portal, Events and Records Appraiser </h1>
 
-    <a class="w-100 btn btn-lg btn-primary" type="button" href="/login/"> Sign In</button>
-    <a class="btn btn-secondary" href="/register/" style="margin-top: 10px"> Create an Account </a>
+    <a class="w-100 btn btn-lg btn-primary" type="button" href="{% url 'user_login' %}"> Sign In</button>
+    <a class="btn btn-secondary" href="{% url 'user_signup' %}" style="margin-top: 10px"> Create an Account </a>
     <p class="mt-5 mb-3 text-muted"> &copy; Project OPERA 2024</p>
   </form>
 </main>

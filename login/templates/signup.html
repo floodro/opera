@@ -37,22 +37,22 @@
   <body class="text-center">
     
 <main class="form-signin">
-  <form>
+  <form action="/submit/" method="POST">
+    {% csrf_token %}
     <img class="mb-4" src="{% static '/assets/brand/OCA-Logo.svg' %}" alt="" width="72" height="72">
     <h1 class="h3 mb-3 fw-normal">Register Your Account</h1>
 
     <div class="mb-3">
-        <label class="form-label">Email</label>
+        <label class="form-label"> Username </label>
         <div class="input-group mb-3">
-            <input type="email" class="form-control" placeholder="G Workspace Account" aria-label="Email Address" aria-describedby="basic-addon2">
-            <span class="input-group-text" id="basic-addon2">@batstate-u.edu.ph</span>
+            <input type="text" class="form-control" aria-label="Username" name='username'>
         </div>
     </div>
 
     <div class="mb-3">
         <label class="form-label">Password</label>
         <div class="input-group mb-3">
-            <input class="form-control password" id="password" class="block mt-1 w-full" type="password" name="password" value="#somefunctioncallhere" required />
+            <input class="form-control password" id="password" class="block mt-1 w-full" type="password" name="password" required />
         <div id="passwordHelpBlock" class="form-text">
             Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
           </div>
@@ -60,29 +60,31 @@
     </div>
 
     <div class="mb-3">
+      <label class="form-label">Confirm Password</label>
+      <div class="input-group mb-3">
+          <input class="form-control password" id="confirm_password" class="block mt-1 w-full" type="password" name="confirm_password" required />
+      </div>
+  </div>
+
+    <div class="mb-3">
         <label for="validationServer01" class="form-label">First name</label>
-        <input type="text" class="form-control is-valid" id="validationServer01" value="Billymer" required>
+        <input type="text" class="form-control is-valid" id="validationServer01" name="first_name" value="" required>
     </div>
     
     <div class="mb-3">
         <label for="validationServer02" class="form-label">Last name</label>
-        <input type="text" class="form-control is-valid" id="validationServer02" value="Salamat" required>
-        <div class="valid-feedback">
-          Looks good!
-        </div>
+        <input type="text" class="form-control is-valid" id="validationServer02" name="last_name" value="" required>
       </div>
 
-    <div class="checkbox mb-3">
-      <label>
-        <input type="checkbox" value="remember-me"> Remember me
-      </label>
+    <div class="mb-3">
+      <label class="form-label"> Email </label>
+      <input type="email" class="form-control email" placeholder="G Workspace Account" id="validationServer02" name="email"  value="" required>
     </div>
 
     <button class="w-100 btn btn-lg btn-primary" type="submit">Create Account</button>
     <p class="mt-5 mb-3 text-muted">&copy; Project OPERA 2024</p>
 
   </form>
-</main>
-
+  </main>
   </body>
 </html>

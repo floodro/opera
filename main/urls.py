@@ -3,5 +3,4 @@ from . import views
 
 urlpatterns= [
     path("dashboard/", views.enterDashboard, name="dashboard"),
-    path("", views.enterLanding, name="landing")
 ]

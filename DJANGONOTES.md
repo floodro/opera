@@ -1,16 +1,6 @@
-# OPERA - Office Portal, Events & Records Appraiser
+# Django - Snippets and Syntax
 
-OPERA, short for Office Portal and Events  Appraiser, is a web-based management portal made for the Office of Culture & Arts of Batangas State University.
-
-This fullstack application was built using the Django Python framework, in both front and back-end.
-
-## VisualSync - Team
-```
-1. Salamat, Billymer - Team Lead / Back-end Developer
-2. Morastel, Clair - Assistant Team Lead
-3. Kalalo, Febrj Yarrah - Front-end Developer
-4. Falic, Marc Daniel - Quality Assurance Head
-```
+Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design.
 
 ## Installation
 
@@ -40,3 +30,10 @@ Quit the server with CONTROL-C.
 ```
 
 With that, the server’s running. Visit http://127.0.0.1:8000/ or http://localhost:8000 with your web browser.
+
+# Import CSS / JS / Images in Django:
+In Django, files like these are called as static files. In order to load them in the Django application, you must first  add this block of code in the first line of every template / html file (before DOCTYPE! html)
+
+```bash
+{% load static %}
+```
