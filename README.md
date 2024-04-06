@@ -14,10 +14,11 @@ This fullstack application was built using the Django Python framework, in both 
 
 ## Installation
 
-Assuming you have Python installed on your computer, you can use the package manager [pip](https://pip.pypa.io/en/stable/) to install Django.
+Assuming you have Python installed on your computer, you can use the package manager [pip](https://pip.pypa.io/en/stable/) to install Django and MongoDB's Python library, PyMongo.
 
 ```bash
 pip install django
+pip install pymongo
 ```
 
 ## Running the Server
