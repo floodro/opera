@@ -5,17 +5,23 @@ from .models import *
 # Create your views here.
 def renderLogin(request):
     if request.method == "POST":
+
+        isVerified = False
+        isLoggedIn = False
+
         sr_code = request.POST.get('sr_code')
         password = request.POST.get('password')
 
         user = user_collection.find_one({'sr_code': sr_code, 'password': password})
 
         if user:
-            return redirect('dashboard')
+            isLoggedIn = True
+
+            if isLoggedIn == True:
+                return redirect('dashboard')
 
         else:
-            #return render(request, 'login-performer.html', {'error_message': "Invalid username / password!"})
-            return HttpResponse("<h1> Login failed! </h1>")
+            return render(request, 'login-performer.html', {'error_message': "Invalid username / password!"})
     else:
         return render(request, 'login-performer.html', {})
 
