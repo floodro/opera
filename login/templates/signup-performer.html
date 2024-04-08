@@ -38,59 +38,12 @@
 </head>
 
 <body class="sign-in-illustration">
-<!-- Navbar Edited -->
-<div class="container position-sticky z-index-sticky top-0"><div class="row"><div class="col-12">
-  <nav class="navbar navbar-expand-lg  blur blur-rounded top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
-    <div class="container-fluid px-0">
-      <a class="navbar-brand font-weight-bolder ms-sm-3">
-        PERFORMER 
-      </a>
-      <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon mt-2">
-          <span class="navbar-toggler-bar bar1"></span>
-          <span class="navbar-toggler-bar bar2"></span>
-          <span class="navbar-toggler-bar bar3"></span>
-        </span>
-      </button>
-      <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0 ms-lg-12 ps-lg-5" id="navigation">
-        <ul class="navbar-nav navbar-nav-hover w-100">
-
-          <li class="nav-item mx-2 ms-lg-auto">
-            <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="dropdownMenuPages8" data-bs-toggle="dropdown" aria-expanded="false">
-              Events and Activities
-            </a>
-          </li>
-
-          <li class="nav-item mx-2 ms-lg-auto">
-            <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="dropdownMenuPages8" data-bs-toggle="dropdown" aria-expanded="false">
-              Forms
-            </a>
-          </li>
-
-          <li class="nav-item mx-2 ms-lg-auto">
-            <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="dropdownMenuPages8" data-bs-toggle="dropdown" aria-expanded="false">
-              Recognition Corner
-            </a>
-          </li>
-        </ul>
-      </div>
-  
-  </nav>
-  <!-- End Navbar -->
-</div></div></div>
 <section>
     <div class="container mt-7">
         <div class="row">
           <div class="col-lg-12 mx-auto">
-            <div class="mb-4 w-25">
-              <h3>Sign Up</h3>
-            </div>
             <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
               <div class="container border-bottom">
-                <div class="row justify-space-between py-2">
-                  <div class="col-lg-3 me-auto">
-                    <p class="lead text-dark pt-1 mb-0">Some text here. Instructions (?) maybe</p>
-                  </div>
     <div class="container py-4">
       <div class="row">
         <div class="col-lg-7 mx-auto d-flex justify-content-center flex-column">
@@ -102,13 +55,13 @@
                 <div class="col-md-6">
                   <label>First Name</label>
                   <div class="input-group mb-4">
-                    <input class="form-control" placeholder="" aria-label="First Name" type="text" name="first_name">
+                    <input class="form-control" placeholder="Enter First Name" aria-label="First Name" type="text" name="first_name">
                   </div>
                 </div>
                 <div class="col-md-6 ps-2">
                   <label>Last Name</label>
                   <div class="input-group mb-4">
-                    <input type="text" class="form-control" placeholder="" aria-label="Last Name" name="last_name">
+                    <input type="text" class="form-control" placeholder="Enter Last Name" aria-label="Last Name" name="last_name">
                   </div>
                 </div>
               </div>
@@ -133,7 +86,7 @@
               <div class="col-md">
                 <label>Confirm Password</label>
                 <div class="input-group mb-4">
-                    <input type="password" class="form-control" placeholder="Confirm password" aria-label="Confirm Password" name="confirm_password">
+                    <input type="password" class="form-control" placeholder="Confirm Password" aria-label="Confirm Password" name="confirm_password">
                 </div>
               </div>
 
@@ -180,11 +133,30 @@
                 <div class="col-md-12">
                   <div class="form-check form-switch mb-4">
                     <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked="">
-                    <label class="form-check-label" for="flexSwitchCheckDefault">I agree to the <a href="javascript:;" class="text-dark"><u>Terms and Conditions</u></a>.</label>
+                    <label class="form-check-label" for="flexSwitchCheckDefault">I agree to the <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="text-dark"><u>Terms and Conditions</u></a>.
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Terms and Conditions</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              Society has put up so many boundaries, so many limitations on what’s right and wrong that it’s almost impossible to get a pure thought out.
+                              <br><br>
+                              It’s like a little kid, a little boy, looking at colors, and no one told him what colors are good, before somebody tells you you shouldn’t like pink because that’s for girls, or you’d instantly become a gay two-year-old.
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn bg-gradient-dark mb-1" data-bs-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                   </div>
                 </div>
-                <div class="col-md-12">
-                  <button type="submit" class="btn bg-gradient-dark w-100">Create Account</button>
+                <div class="col-md-12 text-center">
+                  <button type="submit" class="btn bg-gradient-dark mx-4 mb-0">Create Account</button>
                 </div>
               </div>
             </div>

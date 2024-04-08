@@ -21,6 +21,39 @@
    * Copyright 2011-2022 Twitter, Inc.
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    */
+
+
+/*
+  START OF SOME ADDED STUFFS
+*/
+
+.footer {
+  position: relative;
+  margin-bottom: 0rem;
+}
+
+.events-and-activities {
+  background-color: var(--bs-gray-100);
+}
+
+.dashboard {
+  background-color: var(--bs-gray-100);
+}
+
+.fab-alt {
+  color:white;
+  opacity: 75%;
+}
+
+.bg-gradient-dark-alt {
+  background-image: linear-gradient(310deg, #141727 20%, #6a0909 100%);
+}
+
+/*
+  END OF SOME ADDED STUFFS
+*/
+
+
 :root {
   --bs-blue: #63B3ED;
   --bs-indigo: #596CFF;
@@ -21449,7 +21482,26 @@ fieldset:disabled .btn {
   background-position: 50%;
 }
 
+/*
+part ng page na diff background colors para hindi lang basta plain white
+*/
+
+.page-header-alt {
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: 50%;
+  background-color: var(--bs-gray-200);
+}
+
 .page-header .container {
+  z-index: 1;
+}
+
+.page-header-alt .container {
   z-index: 1;
 }
 

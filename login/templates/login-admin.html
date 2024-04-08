@@ -38,63 +38,25 @@
 </head>
 
 <body class="sign-in-illustration">
-<!-- Navbar Edited -->
-<div class="container position-sticky z-index-sticky top-0"><div class="row"><div class="col-12">
-  <nav class="navbar navbar-expand-lg  blur blur-rounded top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
-    <div class="container-fluid px-0">
-      <a class="navbar-brand font-weight-bolder ms-sm-3">
-        ADMIN 
-      </a>
-      <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon mt-2">
-          <span class="navbar-toggler-bar bar1"></span>
-          <span class="navbar-toggler-bar bar2"></span>
-          <span class="navbar-toggler-bar bar3"></span>
-        </span>
-      </button>
-      <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0 ms-lg-12 ps-lg-5" id="navigation">
-        <ul class="navbar-nav navbar-nav-hover w-100">
-
-          <li class="nav-item mx-2 ms-lg-auto">
-            <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="dropdownMenuPages8" data-bs-toggle="dropdown" aria-expanded="false">
-              Events and Activities
-            </a>
-          </li>
-
-          <li class="nav-item mx-2 ms-lg-auto">
-            <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="dropdownMenuPages8" data-bs-toggle="dropdown" aria-expanded="false">
-              Forms
-            </a>
-          </li>
-
-          <li class="nav-item mx-2 ms-lg-auto">
-            <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="dropdownMenuPages8" data-bs-toggle="dropdown" aria-expanded="false">
-              Recognition Corner
-            </a>
-          </li>
-        </ul>
-      </div>
-  
-  </nav>
-  <!-- End Navbar -->
-</div></div></div>
   <section>
-    <div class="page-header min-vh-100">
+    <div class="page-header min-vh-100" style="background-color: var(--bs-gray-200);">
       <div class="container">
         <div class="row">
-          <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column mx-lg-0 mx-auto">
-            <div class="card card-plain">
-              <div class="card-header pb-0 text-left">
-                <h4 class="font-weight-bolder">Sign In</h4>
+          <div class="col-xl-5 col-lg-5 col-md-7 d-flex flex-column mx-lg-0 mx-auto">
+            
+            
+            <div class="card card-body">
+              <div class="card-header text-left">
+                <h4 class="font-weight-bolder">Sign In as ADMIN</h4>
                 <p class="mb-0">Enter your email and password to sign in</p>
               </div>
               <div class="card-body">
                 <form role="form" action="#" method="POST">
                   {% csrf_token %}
-                  <div class="mb-3">
+                  <div class="mb-3 mx-4">
                     <input type="email" class="form-control form-control-lg" placeholder="Email" aria-label="Email" aria-describedby="email-addon" name="email">
                   </div>
-                  <div class="mb-3">
+                  <div class="mb-3 mx-4">
                     <input type="email" class="form-control form-control-lg" placeholder="Password" aria-label="Password" aria-describedby="password-addon" name="password">
                   </div>
                   <div class="text-center">
@@ -108,10 +70,10 @@
             <div class="position-relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center">
               <img src="{% static 'assets/img/shapes/pattern-lines.svg' %}" alt="pattern-lines" class="position-absolute opacity-4 start-0">
               <div class="position-relative">
-                <img class="max-width-500 w-100 position-relative z-index-2" src="{% static 'assets/img/logos/OCA-Logo.png' %}">
+                <img class="max-width-50 w-50 position-relative z-index-2" src="{% static 'assets/img/logos/OCA-Logo.png' %}">
               </div>
-              <h4 class="mt-5 text-white font-weight-bolder"> Welcome to OPERA</h4>
-              <p class="text-white"> The official website for BatStateU's office of Culture & Arts </p>
+              <h4 class="mt-5 text-white font-weight-bolder"> WELCOME</h4>
+              <p class="text-white"> You're signing in to the Admin Dashboard </p>
             </div>
           </div>
         </div>
