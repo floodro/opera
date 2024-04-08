@@ -1,0 +1,205 @@
+<!--
+=========================================================
+* Soft UI Design System - v1.0.9
+=========================================================
+
+* Product Page:  https://www.creative-tim.com/product/soft-ui-design-system 
+* Copyright 2023 Creative Tim (https://www.creative-tim.com)
+* Coded by www.creative-tim.com
+
+ =========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="{% static 'assets/img/apple-icon.png' %}">
+  <link rel="icon" type="image/png" href="{% static 'assets/img/favicon.png' %}">
+  <title>
+    Create Account
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+  <!-- Nucleo Icons -->
+  <link href="{% static 'css/nucleo-icons.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/nucleo-svg.css' %}" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <link href="{% static 'assets/css/nucleo-svg.css' %}" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link id="pagestyle" href="{% static 'assets/css/soft-design-system.css/' %}" rel="stylesheet" />
+  <!-- Nepcha Analytics (nepcha.com) -->
+  <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
+  <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+</head>
+
+<body class="sign-in-illustration">
+<!-- Navbar Edited -->
+<div class="container position-sticky z-index-sticky top-0"><div class="row"><div class="col-12">
+  <nav class="navbar navbar-expand-lg  blur blur-rounded top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+    <div class="container-fluid px-0">
+      <a class="navbar-brand font-weight-bolder ms-sm-3">
+        PERFORMER 
+      </a>
+      <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon mt-2">
+          <span class="navbar-toggler-bar bar1"></span>
+          <span class="navbar-toggler-bar bar2"></span>
+          <span class="navbar-toggler-bar bar3"></span>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0 ms-lg-12 ps-lg-5" id="navigation">
+        <ul class="navbar-nav navbar-nav-hover w-100">
+
+          <li class="nav-item mx-2 ms-lg-auto">
+            <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="dropdownMenuPages8" data-bs-toggle="dropdown" aria-expanded="false">
+              Events and Activities
+            </a>
+          </li>
+
+          <li class="nav-item mx-2 ms-lg-auto">
+            <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="dropdownMenuPages8" data-bs-toggle="dropdown" aria-expanded="false">
+              Forms
+            </a>
+          </li>
+
+          <li class="nav-item mx-2 ms-lg-auto">
+            <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="dropdownMenuPages8" data-bs-toggle="dropdown" aria-expanded="false">
+              Recognition Corner
+            </a>
+          </li>
+        </ul>
+      </div>
+  
+  </nav>
+  <!-- End Navbar -->
+</div></div></div>
+<section>
+    <div class="container mt-7">
+        <div class="row">
+          <div class="col-lg-12 mx-auto">
+            <div class="mb-4 w-25">
+              <h3>Sign Up</h3>
+            </div>
+            <div class="position-relative border-radius-xl overflow-hidden shadow-lg mb-7">
+              <div class="container border-bottom">
+                <div class="row justify-space-between py-2">
+                  <div class="col-lg-3 me-auto">
+                    <p class="lead text-dark pt-1 mb-0">Some text here. Instructions (?) maybe</p>
+                  </div>
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-lg-7 mx-auto d-flex justify-content-center flex-column">
+          <h3 class="text-center">Performer Sign Up Form</h3>
+          <form role="form" id="contact-form" action="/submit/" method="post" autocomplete="off">
+            {% csrf_token %}
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <label>First Name</label>
+                  <div class="input-group mb-4">
+                    <input class="form-control" placeholder="" aria-label="First Name" type="text" name="first_name">
+                  </div>
+                </div>
+                <div class="col-md-6 ps-2">
+                  <label>Last Name</label>
+                  <div class="input-group mb-4">
+                    <input type="text" class="form-control" placeholder="" aria-label="Last Name" name="last_name">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md">
+                <label>Email Address</label>
+                <div class="input-group mb-4">
+                  <input type="email" class="form-control" placeholder="2*-*****@g.batstate-u.edu.ph" aria-label="Email" name="email">
+                </div>
+              </div>
+              <div class="col-md">
+                <label>SR Code</label>
+                <div class="input-group mb-4">
+                  <input type="text" class="form-control" placeholder="Ex: 21-12345" aria-label="SR Code" name="sr_code">
+                </div>
+              </div>
+              <div class="col-md">
+                <label>Password</label>
+                <div class="input-group mb-4">
+                    <input type="password" class="form-control" placeholder="Password" aria-label="Password" name="password">
+                </div>
+              </div>
+              <div class="col-md">
+                <label>Confirm Password</label>
+                <div class="input-group mb-4">
+                    <input type="password" class="form-control" placeholder="Confirm password" aria-label="Confirm Password" name="confirm_password">
+                </div>
+              </div>
+
+              <!-- DROPDOWN MENUS AHEAD-->
+              <div class="row">
+                <div class="col-md-6">
+                  <label>Campus</label>
+                  <div class="input-group mb-4">
+                    <select class="form-control" name="campus">
+                        <option value="none" selected disabled hidden>Select Campus</option>
+                        <option value="pablo-borbon">Pablo Borbon</option>
+                        <option value="alangilan">Alangilan</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6 ps-2">
+                  <label>College</label>
+                  <select class="form-control" name="college">
+                    <option value="none" selected disabled hidden>Select College</option>
+                    <option value="coe">College of Engineering</option>
+                    <option value="cics">College of Informatics and Computing Sciences</option>
+                </select>
+                </div>
+                <div class="col-md-6 ps-3 mb-4">
+                    <label>Cultural Group</label>
+                    <select class="form-control" name="cultural_group">
+                        <option value="none" selected disabled hidden>Select Cultural Group</option>
+                        <option value="performing-arts">Performing Arts</option>
+                        <option value="music">Music</option>
+                        <option value="dance">Dance</option>
+                        <option value="theater">Theater</option>
+                        <option value="visual-arts">Visual Arts</option>
+                        <option value="literary-arts">Literary Arts</option>
+                    </select>
+                  </div>
+                  
+              </div>
+              <!-- end of DROPDOWN MENUS-->
+
+              <div class="row mb-4">
+                <div class="col-md-12">
+                  <div class="form-check form-switch mb-4">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked="">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">I agree to the <a href="javascript:;" class="text-dark"><u>Terms and Conditions</u></a>.</label>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <button type="submit" class="btn bg-gradient-dark w-100">Create Account</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--   Core JS Files   -->
+  <script src="{% static 'assets/js/core/popper.min.js' %}" type="text/javascript"></script>
+  <script src="{% static 'assets/js/core/bootstrap.min.js' %}" type="text/javascript"></script>
+  <script src="{% static 'assets/js/plugins/perfect-scrollbar.min.js' %}"></script>
+  <!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
+  <script src="{% static 'assets/js/plugins/parallax.min.js' %}"></script>
+  <!-- Control Center for Soft UI Kit: parallax effects, scripts for the example pages etc -->
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
+  <script src="{% static 'assets/js/soft-design-system.min.js?v=1.0.9' %}" type="text/javascript"></script>
+</body>
+
+</html>
