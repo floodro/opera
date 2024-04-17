@@ -105,14 +105,25 @@
                     </select>
                   </div>
                 </div>
-                <div class="col-md-6 ps-2"> <!-- ADDITIONAL FEATURE: Dropdown specific college depts based on campus -->
+                <div class="col-md-6 ps-2">
                   <label>College</label>
                   <select class="form-control" name="college">
-                    <option value="none" selected disabled hidden>Select College</option>
-                    <option value="coe">College of Engineering</option>
-                    <option value="cics">College of Informatics and Computing Sciences</option>
-                </select>
-                </div>
+                      <option value="none" selected disabled hidden>Select College</option>
+                      {% if campus == 'alangilan' %}
+                          <option value="cics">College of Informatics and Computing Sciences</option>
+                          <option value="coe">College of Engineering</option>
+                          <option value="cafad">College of Architecture, Fine Arts & Design</option>
+                          <option value="cit">College of Industrial Technology</option>
+                      {% elif campus == 'pablo-borbon' %}
+                          <option value="cas">College of Arts and Sciences</option>
+                          <option value="cabeiham">College of Accountancy, Business, Economics and International Hospitality Management</option>
+                          <option value="conahs">College of Nursing and Allied Health Sciences</option>
+                          <option value="col">College of Law</option>
+                          <option value="cte">College of Teacher Education</option>
+                      {% endif %}
+                  </select>
+              </div>
+              
                 <div class="col-md-6 ps-3 mb-4">
                     <label>Cultural Group</label>
                     <select class="form-control" name="cultural_group">

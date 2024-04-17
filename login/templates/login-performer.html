@@ -43,17 +43,15 @@
       <div class="container">
         <div class="row">
           <div class="col-xl-5 col-lg-5 col-md-7 d-flex flex-column mx-lg-0 mx-auto">
-            
-            
             <div class="card card-body">
               <div class="card-header text-left">
-                <h4 class="font-weight-bolder">Sign In as Performer</h4>
-                <p class="mb-0">Enter your SR code and password to sign in</p>
+                <h4 class="font-weight-bolder"> Sign In </h4>
+                <p class="mb-0">Enter your email and password to sign in.</p>
               </div>
                 <form role="form"  method="POST" action="#">
                   {% csrf_token %}
                   <div class="mb-3 mx-4">
-                    <input type="text" class="form-control form-control-lg" placeholder="SR-code" aria-label="SR-code" aria-describedby="SR-code-addon" name="sr_code">
+                    <input type="text" class="form-control form-control-lg" placeholder="Email" aria-label="SR-code" aria-describedby="SR-code-addon" name="email">
                   </div>
                   <div class="mb-3 mx-4">
                     <input type="password" class="form-control form-control-lg" placeholder="Password" aria-label="Password" aria-describedby="password-addon" name="password">

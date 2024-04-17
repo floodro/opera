@@ -1,10 +1,10 @@
 /*!
 
 =========================================================
-* Soft UI Design System - v1.0.9
+* Soft UI Dashboard - v1.0.7
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-design-system
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard
 * Copyright 2023 Creative Tim (https://www.creative-tim.com)
 * Licensed under MIT (https://github.com/creativetimofficial/soft-ui-dashboard/blob/main/LICENSE)
 
@@ -15,6 +15,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
+
 /*!
    * Bootstrap  v5.2.3 (https://getbootstrap.com/)
    * Copyright 2011-2022 The Bootstrap Authors
@@ -27,15 +28,17 @@
   START OF SOME ADDED STUFFS
 */
 
-.pdf-icon {
-  width: 40px;
-  height: 40px;
+.fa-color-w {
+  color: white;
 }
 
-.ak117 {
-  margin-top: 80px;
-  margin-right: 1.5rem;
+.p-u {
+  text-decoration: underline;
 }
+
+/*
+  END OF SOME ADDED STUFFS
+*/
 
 .footer {
   position: relative;
@@ -20201,10 +20204,10 @@ fieldset:disabled .btn {
 /*!
 
 =========================================================
-* Soft UI Design System - v1.0.9
+* Soft UI Dashboard - v1.0.7
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-design-system
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard
 * Copyright 2023 Creative Tim (https://www.creative-tim.com)
 * Licensed under MIT (site.license)
 
@@ -23393,8 +23396,10 @@ html {
   background-color: #fff;
 }
 
+/* Dine papalitan yung kulay ng active button sa sidebar*/
+
 .navbar-vertical .navbar-nav>.nav-item .nav-link.active .icon {
-  background-image: linear-gradient(310deg, #cb0c9f 0%, #cb0c9f 100%);
+  background-image: linear-gradient(310deg, #ac2304 0%, #6a0909 100%);
 }
 
 .navbar-vertical .navbar-nav>.nav-item .nav-link.active .icon svg .color-background,
@@ -23865,10 +23870,12 @@ html {
   line-height: 30px;
 }
 
+/* Dine pinapaltan yung kulay ng active page sa pagination */ 
+
 .pagination.pagination-primary .page-item.active>.page-link,
 .pagination.pagination-primary .page-item.active>.page-link:focus,
 .pagination.pagination-primary .page-item.active>.page-link:hover {
-  background-image: linear-gradient(310deg, #7928CA 0%, #FF0080 100%);
+  background-image: linear-gradient(310deg, #ac2304 0%, #6a0909 100%);
   border: none;
   color: #fff;
 }
@@ -26757,4 +26764,4 @@ pre[class*="language-"] {
   }
 }
 
-/*# sourceMappingURL=kit-free.css.map */
+/*# sourceMappingURL=dashboard-free.css.map */

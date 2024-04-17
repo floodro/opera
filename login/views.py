@@ -9,10 +9,10 @@ def renderLogin(request):
         isVerified = False
         isLoggedIn = False
 
-        sr_code = request.POST.get('sr_code')
+        email = request.POST.get('email')
         password = request.POST.get('password')
 
-        user = user_collection.find_one({'sr_code': sr_code, 'password': password})
+        user = user_collection.find_one({'email': email, 'password': password})
 
         if user:
             isLoggedIn = True
@@ -21,7 +21,7 @@ def renderLogin(request):
                 return redirect('dashboard')
 
         else:
-            return render(request, 'login-performer.html', {'error_message': "Invalid username / password!"})
+            return render(request, 'login-performer.html', {'error_message': "Invalid email / password!"})
     else:
         return render(request, 'login-performer.html', {})
 
@@ -36,6 +36,9 @@ def renderLanding(request):
 
 def submit_form(request):
     if request.method == "POST":
+        
+        isVerified = False
+        
         first_name = request.POST.get('first_name')
         last_name = request.POST.get('last_name')
         email = request.POST.get('email')
