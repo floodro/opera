@@ -40,7 +40,7 @@
 <body class="forms">
   <!-- Navbar Edited -->
   <div class="container position-sticky z-index-sticky top-0"><div class="row"><div class="col-12">
-    <nav class="navbar navbar-expand-lg  blur blur-rounded top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 ak117">
+    <nav class="navbar navbar-expand-lg  blur blur-rounded top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
       <div class="container-fluid px-0">
         <a class="navbar-brand font-weight-bolder ms-sm-3">
           FORMS
@@ -81,72 +81,66 @@
 
 <!-- START BODY FOR FORMS -->
 <section>
-    <div class="page-header-alt min-vh-90 bg-gradient-dark-alt bg-cover px-0" style="background-image: url('../assets/img/curved-images/curved13.jpg')">
-      <span class="mask bg-gradient-info opacity-9"></span>  
-      <div class="container card card-body ak117">
-            <div class="card-header text-left">
-              <h4 class="font-weight-bolder">Downloadable Forms</h4>
-              <p>Simply click on the desired form to initiate the download process</p>
-            </div>
+    <div class="page-header-alt min-vh-85"> 
+      <div class="container-fluid card card-body mx-4">
+        <div class="card-header pb-0 text-left">
+              <h3 class="font-weight-bolder">Downloadable Forms</h3>
+              <p>Simply click on the desired form to initiate the download process.</p>
+        </div>
                 <!-- START CONTENT BODY FOR FORMS -->
-                <div class="form-categ">
-        
-                  <div class="form-list">   
-                    <div class="media-body">
-                      <h6 class="mt-1"> <img class="pdf-icon" src="{% static "assets\img\pdf_icon.png" %}" alt="Generic placeholder image"> <a href = "{% static "assets\pdfs\01_Certificate-of-Membership.pdf" %}" target="_blank" class="link" attributes-list download>
-                        Certificate of Membership</a></h6>
-                    </div>
-                  </div> 
-                            
-                    <div class="form-list">  
-                    <div class="media-body">
-                      <h6 class="mt-1"> <img class="pdf-icon" src="{% static "assets\img\pdf_icon.png" %}" alt="Generic placeholder image"> <a href="{% static "assets\pdfs\02_Audition-Criteria.pdf" %}" target="_blank" class="link" attributes-list download> 
-                        Audition Criteria</a></h6>
-                    </div>
-                  </div> 
-                  
-                  <div class="form-list">  
-                    <div class="media-body">
-                      <h6 class="mt-1"> <img class="pdf-icon" src="{% static "assets\img\pdf_icon.png" %}" alt="Generic placeholder image"> <a href = "{% static "assets/pdfs/03_Performers-Profile-Form" %}" target="_blank" class="link" attributes-list download> 
-                        Performers Profile Form</a></h6>
-                    </div>
-                  </div> 
-
-                  <div class="form-list">  
-                    <div class="media-body">
-                      <h6 class="mt-1"> <img class="pdf-icon" src="{% static "assets\img\pdf_icon.png" %}" alt="Generic placeholder image"> <a href = "{% static "assets/pdfs/04_Request-for-Presentation-Intermission.pdf" %}" target="_blank" class="link" attributes-list download> 
-                        Request for Presentation Intermission</a></h6>
-                    </div>
-                  </div> 
-
-                  <div class="form-list">  
-                    <div class="media-body">
-                      <h6 class="mt-1"> <img class="pdf-icon" src="{% static "assets\img\pdf_icon.png" %}" alt="Generic placeholder image"> <a href="{% static "assets/pdfs/06_Property-Borrowing-Form.pdf" %}" target="_blank" class="link" attributes-list download> 
-                        Trainer Evaluation Form</a></h6>
-                      </div>
-                  </div> 
-
-                  <div class="form-list">  
-                    <div class="media-body">
-                      <h6 class="mt-1"> <img class="pdf-icon" src="{% static "assets\img\pdf_icon.png" %}" alt="Generic placeholder image"> <a href="{% static "assets\pdfs\06_Property-Borrowing-Form.pdf" %}" target="_blank" class="link" attributes-list download> 
-                        Property Borrowing Form</a></h6>
-                    </div>
-                  </div> 
-
-                  <div class="form-list">  
-                    <div class="media-body">
-                      <h6 class="mt-1"> <img class="pdf-icon" src="{% static "assets\img\pdf_icon.png" %}" alt="Generic placeholder image"><a href="{% static "assets\pdfs\Audience-Evaluation-Form.pdf" %}" target="_blank" class="link" attributes-list download> 
-                        Audience Evaluation Form</a></h6>
-                    </div>
-                  </div> 
-                      
-                         
-                         
-                  </div>
-  
-                
-                <!-- END CONTENT BODY FOR FORMS -->
+        <div class="card-body p-3 mx-4">
+        <div class="row">
+          <div class="col-6 py-3 ps-0 form-list">   
+            <div class="d-flex me-2 mb-2">
+              <img class="pdf-icon" src="{% static "assets\img\pdf_icon.png" %}" alt="Generic placeholder image"> <a href = "{% static "assets\pdfs\01_Certificate-of-Membership.pdf" %}" target="_blank" class="link" attributes-list download>
+              <h6 class="">Certificate of Membership</a></h6>
             </div>
+          </div> 
+                    
+            <div class="col-6 py-3 ps-0 form-list">  
+            <div class="d-flex me-2 mb-2">
+              <img class="pdf-icon" src="{% static "assets\img\pdf_icon.png" %}" alt="Generic placeholder image"> <a href="{% static "assets\pdfs\02_Audition-Criteria.pdf" %}" target="_blank" class="link" attributes-list download> 
+              <h6 class="">Audition Criteria</a></h6>
+            </div>
+          </div> 
+          
+          <div class="col-6 py-3 ps-0 form-list">  
+            <div class="d-flex me-2 mb-2">
+              <img class="pdf-icon" src="{% static "assets\img\pdf_icon.png" %}" alt="Generic placeholder image"> <a href = "{% static "assets/pdfs/03_Performers-Profile-Form" %}" target="_blank" class="link" attributes-list download> 
+              <h6 class="">Performers Profile Form</a></h6>
+            </div>
+          </div> 
+
+          <div class="col-6 py-3 ps-0 form-list">  
+            <div class="d-flex me-2 mb-2">
+              <img class="pdf-icon" src="{% static "assets\img\pdf_icon.png" %}" alt="Generic placeholder image"> <a href = "{% static "assets/pdfs/04_Request-for-Presentation-Intermission.pdf" %}" target="_blank" class="link" attributes-list download> 
+              <h6 class=""> Request for Presentation Intermission</a></h6>
+            </div>
+          </div> 
+
+          <div class="col-6 py-3 ps-0 form-list">  
+            <div class="d-flex me-2 mb-2">
+              <img class="pdf-icon" src="{% static "assets\img\pdf_icon.png" %}" alt="Generic placeholder image"> <a href="{% static "assets/pdfs/06_Property-Borrowing-Form.pdf" %}" target="_blank" class="link" attributes-list download> 
+              <h6 class="">Trainer Evaluation Form</a></h6>
+              </div>
+          </div> 
+
+          <div class="col-6 py-3 ps-0 form-list">  
+            <div class="d-flex me-2 mb-2">
+              <img class="pdf-icon" src="{% static "assets\img\pdf_icon.png" %}" alt="Generic placeholder image"> <a href="{% static "assets\pdfs\06_Property-Borrowing-Form.pdf" %}" target="_blank" class="link" attributes-list download> 
+              <h6 class="">Property Borrowing Form</a></h6>
+            </div>
+          </div> 
+
+          <div class="col-6 py-3 ps-0 form-list">  
+            <div class="d-flex me-2 mb-2">
+              <img class="pdf-icon" src="{% static "assets\img\pdf_icon.png" %}" alt="Generic placeholder image"><a href="{% static "assets\pdfs\Audience-Evaluation-Form.pdf" %}" target="_blank" class="link" attributes-list download> 
+              <h6 class="">Audience Evaluation Form</a></h6>
+            </div>
+          </div> 
+        </div>
+                <!-- END CONTENT BODY FOR FORMS -->
+      </div>
     </div>
   </section>
 <!-- END BODY FOR FORMS -->
