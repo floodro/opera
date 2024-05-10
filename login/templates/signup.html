@@ -48,7 +48,7 @@
       <div class="row">
         <div class="col-lg-7 mx-auto d-flex justify-content-center flex-column">
           <h3 class="text-center">Performer Sign Up Form</h3>
-          <form role="form" id="contact-form" action="/submit/" method="post" autocomplete="off">
+          <form role="form" id="contact-form" action="{% url 'submit_form' %}" method="post" autocomplete="off">
             {% csrf_token %}
             <div class="card-body">
               <div class="row">
@@ -58,6 +58,7 @@
                     <input class="form-control" placeholder="Enter First Name" aria-label="First Name" type="text" name="first_name">
                   </div>
                 </div>
+
                 <div class="col-md-6 ps-2">
                   <label>Last Name</label>
                   <div class="input-group mb-4">
@@ -65,24 +66,35 @@
                   </div>
                 </div>
               </div>
+              
+              <div class="col-md">
+                <label>Username</label>
+                <div class="input-group mb-4">
+                  <input type="text" class="form-control" placeholder="Enter Username" aria-label="Username" name="username">
+                </div>
+              </div>
+
               <div class="col-md">
                 <label>Email Address</label>
                 <div class="input-group mb-4">
                   <input type="email" class="form-control" placeholder="2*-*****@g.batstate-u.edu.ph" aria-label="Email" name="email">
                 </div>
               </div>
+
               <div class="col-md">
                 <label>SR Code</label>
                 <div class="input-group mb-4">
                   <input type="text" class="form-control" placeholder="Ex: 21-12345" aria-label="SR Code" name="sr_code">
                 </div>
               </div>
+              
               <div class="col-md">
                 <label>Password</label>
                 <div class="input-group mb-4">
                     <input type="password" class="form-control" placeholder="Password" aria-label="Password" name="password">
                 </div>
               </div>
+              
               <div class="col-md">
                 <label>Confirm Password</label>
                 <div class="input-group mb-4">
@@ -109,18 +121,15 @@
                   <label>College</label>
                   <select class="form-control" name="college">
                       <option value="none" selected disabled hidden>Select College</option>
-                      {% if campus == 'alangilan' %}
-                          <option value="cics">College of Informatics and Computing Sciences</option>
-                          <option value="coe">College of Engineering</option>
-                          <option value="cafad">College of Architecture, Fine Arts & Design</option>
-                          <option value="cit">College of Industrial Technology</option>
-                      {% elif campus == 'pablo-borbon' %}
-                          <option value="cas">College of Arts and Sciences</option>
-                          <option value="cabeiham">College of Accountancy, Business, Economics and International Hospitality Management</option>
-                          <option value="conahs">College of Nursing and Allied Health Sciences</option>
-                          <option value="col">College of Law</option>
-                          <option value="cte">College of Teacher Education</option>
-                      {% endif %}
+                        <option value="cics">College of Informatics and Computing Sciences</option>
+                        <option value="coe">College of Engineering</option>
+                        <option value="cafad">College of Architecture, Fine Arts & Design</option>
+                        <option value="cit">College of Industrial Technology</option>
+                        <option value="cas">College of Arts and Sciences</option>
+                        <option value="cabeiham">College of Accountancy, Business, Economics and International Hospitality Management</option>
+                        <option value="conahs">College of Nursing and Allied Health Sciences</option>
+                        <option value="col">College of Law</option>
+                        <option value="cte">College of Teacher Education</option>
                   </select>
               </div>
               
@@ -184,8 +193,70 @@
   <script src="{% static 'assets/js/plugins/parallax.min.js' %}"></script>
   <!-- Control Center for Soft UI Kit: parallax effects, scripts for the example pages etc -->
   <!--  Google Maps Plugin    -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
+  <!--script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script-->
   <script src="{% static 'assets/js/soft-design-system.min.js?v=1.0.9' %}" type="text/javascript"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var campusDropdown = document.querySelector('[name="campus"]');
+        var collegeDropdown = document.getElementById('college-dropdown');
+          
+        campusDropdown.addEventListener('change', function() {
+            // Clear existing options
+            collegeDropdown.innerHTML = '<option value="none" selected disabled hidden>Select College</option>';
+            
+            // Define colleges for each campus
+            var colleges = {
+                'alangilan': ['cics', 'coe', 'cafad', 'cit'],
+                'pablo-borbon': ['cas', 'cabeiham', 'conahs', 'col', 'cte'],
+                // Add other campuses and their colleges here if needed
+            };
+            
+            // Get selected campus
+            var selectedCampus = this.value;
+            
+            // Populate college dropdown with options based on the selected campus
+            colleges[selectedCampus].forEach(function(college) {
+                var option = document.createElement('option');
+                option.value = college;
+                option.textContent = getCollegeName(college); // Function to get the full college name
+                collegeDropdown.appendChild(option);
+            });
+        });
+        
+        // Function to get the full college name
+        function getCollegeName(college) {
+            switch (college) {
+                case 'cics':
+                    return 'College of Informatics and Computing Sciences';
+                case 'coe':
+                    return 'College of Engineering';
+                case 'cafad':
+                    return 'College of Architecture, Fine Arts & Design';
+                case 'cit':
+                    return 'College of Industrial Technology';
+                case 'cas':
+                    return 'College of Arts and Sciences';
+                case 'cabeiham':
+                    return 'College of Accountancy, Business, Economics and International Hospitality Management';
+                case 'conahs':
+                    return 'College of Nursing and Allied Health Sciences';
+                case 'col':
+                    return 'College of Law';
+                case 'cte':
+                    return 'College of Teacher Education';
+                // Add cases for other colleges if needed
+                default:
+                    return '';
+            }
+        }
+        
+        // Trigger change event if campus is pre-selected (for editing existing data)
+        if (campusDropdown.value) {
+            campusDropdown.dispatchEvent(new Event('change'));
+        }
+    });
+</script>
 </body>
 
 </html>
+  

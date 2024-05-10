@@ -1,71 +1,83 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
-from .models import *
+from django.contrib.auth import authenticate, login, logout
+from django.contrib import messages
+from .models import User
+import pymysql
 
-# Create your views here.
 def renderLogin(request):
-    if request.method == "POST":
-
-        isVerified = False
-        isLoggedIn = False
-
+    if request.method == 'POST':
         email = request.POST.get('email')
         password = request.POST.get('password')
-
-        user = user_collection.find_one({'email': email, 'password': password})
-
-        if user:
-            isLoggedIn = True
-
-            if isLoggedIn == True:
-                return redirect('dashboard')
-
+        user_data = authenticate_user(email, password)
+        
+        if user_data:
+            # Assuming 'dashboard' is the name of your dashboard view
+            # Redirect to dashboard upon successful login
+            return redirect('dashboard')
         else:
-            return render(request, 'login-performer.html', {'error_message': "Invalid email / password!"})
-    else:
-        return render(request, 'login-performer.html', {})
+            messages.error(request, "Invalid email or password.")
+    
+    return render(request, 'login.html', {})
 
-def renderLoginAsAdmin(request):
-    return render(request, 'login-admin.html')
+def userLogout(request):
+    logout(request)
+    return redirect('user_landing')
 
 def renderSignup(request):
-    return render(request, 'signup-performer.html', {})
+    return render(request, 'signup.html', {})
 
 def renderLanding(request):
     return render(request, 'landing.html', {})
 
 def submit_form(request):
-    if request.method == "POST":
-        
-        isVerified = False
-        
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        username = request.POST.get('username')
+        password1 = request.POST.get('password')
+        confirm_password = request.POST.get('confirm_password')
         first_name = request.POST.get('first_name')
         last_name = request.POST.get('last_name')
-        email = request.POST.get('email')
         sr_code = request.POST.get('sr_code')
-        password = request.POST.get('password')
-        confirm_password = request.POST.get('confirm_password')
         campus = request.POST.get('campus')
-        college = request.POST.get('college')
         cultural_group = request.POST.get('cultural_group')
-
-        if password != confirm_password:
-            return HttpResponse("Passwords do not match!", status=400)
-
-        new_user = {
-            'first_name': first_name,
-            'last_name': last_name,
-            'email': email,
-            'sr_code': sr_code,
-            'password': password,
-            'campus': campus,
-            'college': college,
-            'cultural_group': cultural_group
-        }
-
-        user_collection.insert_one(new_user) #Insert new user into the MongoDB collection using the model
-
-        return redirect('user_login')
+        
+        if password1 == confirm_password:
+            user = User(
+                email=email, 
+                password1=password1, 
+                confirm_password=confirm_password, 
+                first_name=first_name, 
+                last_name=last_name, 
+                sr_code=sr_code,
+                campus=campus)
+            
+            user.save()
+        
+            print("Data successfully saved!")
+            return redirect('user_login')  # Redirect to login page after successful form submission
+        
+        else:
+            messages.error(request, "Passwords do not match.")
     
-    else:  
-        return HttpResponse('Method not allowed', status=400)
+    return render(request, 'signup.html', {})
+
+def authenticate_user(email, password):
+    connection = pymysql.connect(host='127.0.0.1',
+                                 user='root',
+                                 password='Floodroplays09',
+                                 database='opera',
+                                 cursorclass=pymysql.cursors.DictCursor)
+
+    try:
+        with connection.cursor() as cursor:
+            sql = "SELECT * FROM accounts WHERE email = %s AND password1 = %s"
+            cursor.execute(sql, (email, password))
+            user_data = cursor.fetchone()
+
+            if user_data:
+                return user_data
+            else:
+                return None
+    finally:
+        # Close the database connection
+        connection.close()

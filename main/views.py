@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect
-from .models import office_metrics
 
 # Create your views here.
 def enterDashboard(request):
@@ -30,25 +29,4 @@ def enterRecognition(request):
     return render(request, 'recognition-view.html', {})
 
 def updateProfile(request):
-    
-    if isVerified == True:
-        updated_first_name = request.POST.get('first_name')
-        updated_last_name = request.POST.get('last_name')
-        updated_email = request.POST.get('email')
-        updated_sr_code = request.POST.get('sr_code')
-        updated_password = request.POST.get('password')
-        updated_confirm_password = request.POST.get('confirm_password')
-        updated_campus = request.POST.get('campus')
-        updated_college = request.POST.get('college')
-        updated_cultural_group = request.POST.get('cultural_group')
-
-    updated_user = {
-        'first_name': first_name,
-        'last_name': last_name,
-        'email': email,
-        'sr_code': sr_code,
-        'password': password,
-        'campus': campus,
-        'college': college,
-        'cultural_group': cultural_group
-    }
+    pass

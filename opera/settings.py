@@ -1,5 +1,6 @@
-import os
+import os, sys
 from pathlib import Path
+#from auth_backend import EmailAuthBackend
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,8 +25,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main',
-    'login',
+    'main.apps.MainConfig',
+    'login.apps.LoginConfig',
 ]
 
 MIDDLEWARE = [
@@ -62,10 +63,14 @@ WSGI_APPLICATION = 'opera.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+	'default': {
+		'ENGINE': 'django.db.backends.mysql',
+		'NAME': 'opera',
+		'USER': 'root',
+		'PASSWORD': 'Floodroplays09',
+		'HOST':'127.0.0.1',
+		'PORT':'3306',
+	}
 }
 
 # Password validation

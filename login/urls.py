@@ -6,5 +6,5 @@ urlpatterns= [
     path("signup/", v2.renderSignup, name="user_signup"),
     path("landing/", v2.renderLanding, name="user_landing"),
     path("submit/", v2.submit_form, name="submit_form"),
-    path("adminlogin/", v2.renderLoginAsAdmin, name="user_admin_login")
+    path("authenticate/", v2.authenticate_user, name="auth")
 ]
